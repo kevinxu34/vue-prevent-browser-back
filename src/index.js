@@ -6,6 +6,7 @@ const preventBack = {
             if(this.$router.mode=='hash'){
                 path = '#'+path;
             }
+            path = this.$router.options.base.replace(/\/$/, '') + path
             window.pushStateFun = function(){
                 let state = { 
                     title: null, 
